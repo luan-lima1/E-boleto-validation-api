@@ -2,9 +2,9 @@
   "name": "validation-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "index.ts",
   "scripts": {
-    "test": "jest",
+    "test": "jest --runInBand",
     "build": "nest build",
     "dev": "npx nodemon -r dotenv/config --exec ts-node --files src/server.ts | pino-pretty"
   },

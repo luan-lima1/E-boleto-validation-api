@@ -1,4 +1,4 @@
-import { module10, module11 } from "../modules/modules";
+import { module10, module11 } from "../../modules/modules";
 
 export async function convBarCode(line: string) {
   let barCode = "";
@@ -16,7 +16,7 @@ export async function validateLine(line: string, validarCampos = false) {
   if (lineValue === 6 || lineValue === 7) module = module10;
   else if (lineValue === 8 || lineValue === 9) module = module11;
   else return false;
-  const campos = Array.from({ length: 4 }, (v, index) => {
+  const campo = Array.from({ length: 4 }, (v, index) => {
     const start = 11 * index + index;
     const end = 11 * (index + 1) + index;
     return {
@@ -24,7 +24,7 @@ export async function validateLine(line: string, validarCampos = false) {
       DV: line.substring(end, end + 1),
     };
   });
-  const lineIsValid = campos.every((e) => module(e.num) === Number(e.DV));
+  const lineIsValid = campo.every((e) => module(e.num) === Number(e.DV));
   const lineToBarCode = await convBarCode(line);
   const amount = await getValue(line);
   return {

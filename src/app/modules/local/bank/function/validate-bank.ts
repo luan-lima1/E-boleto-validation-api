@@ -1,4 +1,5 @@
-import { module10 } from "../modules/modules";
+import dayjs from "dayjs";
+import { module10 } from "../../modules/modules";
 
 export const bankToBarCode = async (line: string): Promise<string> => {
   let bankLine = "";
@@ -28,8 +29,7 @@ export async function validateLine(line: string, validarCampos = false) {
       DV: line.substring(31, 32),
     },
   ];
-
-  const bankIsValid = validarCampos
+  const lineIsValid = validarCampos
     ? campo.every((e) => module10(e.num) === Number(e.DV))
     : true;
   const barCode = await bankToBarCode(line);
@@ -39,7 +39,7 @@ export async function validateLine(line: string, validarCampos = false) {
     barCode,
     expirationDate,
     amount,
-    bankIsValid,
+    lineIsValid,
   };
 }
 
@@ -60,10 +60,9 @@ export const getValue = async (line: string): Promise<string> => {
   }
 };
 
-export const exDate = async (line: string) => {
-  const dias = parseInt(line.slice(33, 37));
-  const data = new Date(1997, 10 - 1, 7);
-  data.setDate(data.getDate() + dias);
-  data.getDate();
-  return data;
+export const exDate = async (code: string) => {
+  const days = parseInt(code.slice(33, 37));
+  const date = new Date(1997, 10 - 1, 7);
+  date.setDate(date.getDate() + days);
+  return dayjs(date).format("DD/MM/YYYY");
 };
