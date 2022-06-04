@@ -4,7 +4,7 @@ Esta API recebe os números (sem pontos, traços e espaços) da linha digitável
 
 # Inserção de Linha Digitável:
 
-A linha digitável do seu boleto deve ser inserida sem pontos, traços e espaços via parâmetro. Exemplo: (GET) "http://localhost:8080/boleto/:linha". Se válido, o boleto irá retornar os seguintes valores em JSON: barCode, expirationDate e amount.
+A linha digitável do seu boleto deve ser inserida sem pontos, traços e espaços via parâmetro. Exemplo: (GET) "http://localhost:8080/boleto/123456". Se válido, o boleto irá retornar os seguintes valores em JSON: barCode, expirationDate e amount.
 
 Aqui está alguns exemplos de boletos válidos.
 26091408099776913423632700000006190050000019446  - Bancário.
