@@ -1,8 +1,8 @@
 import { Router } from "express";
-import bankRouter from "./bank";
+import bancoRouter from "./bank";
 
 const router = Router();
 
-router.use(bankRouter);
+router.use(bancoRouter);
 
 export default router;

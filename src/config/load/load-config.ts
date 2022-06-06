@@ -20,9 +20,6 @@ const loadConfig = (configSchema: any, data: any) => {
       enabled: envVars.LOGSTASH_ENABLED,
       loggerInfo: envVars.LOGGER_LEVEL,
     },
-    lambda: {
-      url: envVars.URL_LAMBDA,
-    },
   };
 };
 

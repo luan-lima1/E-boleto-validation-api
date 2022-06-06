@@ -17,7 +17,6 @@ export default joi
       .required(),
     LOGSTASH_ENABLED: joi.string().default(true),
     PORT: joi.string().required(),
-    URL_LAMBDA: joi.string().required(),
   })
   .unknown()
   .required();

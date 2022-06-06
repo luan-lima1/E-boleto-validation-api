@@ -1,6 +1,6 @@
 # API - REST desenvolvida em Node.js, Typescript e AWS Lambda.
 
-Esta API recebe os números (sem pontos, traços e espaços) da linha digitável de boletos bancários, ou boletos de convênios, e se válidos, retorna os valores da solicitação em status(200), código de barras (barCode), validade (expirationDate),valor (amount),
+Esta API recebe os números (sem pontos, traços e espaços) da linha digitável de boletos bancários, ou boletos de convênios, e se válidos, retorna os valores da solicitação em status(200), código de barras (barCode), validade (expirationDate),valor (amount).
 
 # Inserção de Linha Digitável:
 
@@ -17,13 +17,12 @@ A aplicação faz a validação dos digitos verificadores nos campos da linha di
 
 # Teste Complementar (Opcional):
 
-Este site valida boletos bancários e retorna os dados de forma idêntica aos da API, 
-ele recebe tanto linha digitável, quanto o código de barras gerado pela própria API.
+Este site valida boletos bancários e retorna os dados de forma idêntica aos da API. O barCode gerado pela API, pode ser ser validado neste site, e mostra que o retorno é válido.
 https://www.boletobancario-codigodebarras.com/2019/04/boleto-bancario-de-cobranca.html
 
 # Instalar Dependências do Projeto:
 
-Para instalar as dependências, execute um dos seguintes comandos no terminal de sua máquina, ou do seu interpretador de código-fonte. 
+Para instalar as dependências necessárias para a execução do projeto, execute um dos seguintes comandos no terminal de sua máquina, ou do seu interpretador de código-fonte. 
 
 ```bash
   yarn add
@@ -33,7 +32,7 @@ Para instalar as dependências, execute um dos seguintes comandos no terminal de
 
 # Executar Aplicativo no Ambiente de Desenvolvimento:
 
-Para executar o projeto, execute um dos seguintes comandos no terminal de sua máquina, ou do seu interpretador de código-fonte. 
+Para executar o projeto, execute um dos seguintes comandos no terminal de sua máquina, ou do seu interpretador de código-fonte, e em seguida siga o exemplo do item "Inserção de Linha Digitável". 
 
 ```bash
   yarn dev
@@ -43,7 +42,7 @@ Para executar o projeto, execute um dos seguintes comandos no terminal de sua m�
 
 # Para Compilar a Aplicação em Javascript:
 
-Para compilar o projeto, execute um dos seguintes comandos no terminal de seu interpretador de código-fonte.
+Para compilar o projeto, execute um dos seguintes comandos no terminal de seu interpretador de código-fonte, o projeto compilado em .js irá para uma pasta chamada "dist".
 
 ```bash
   yarn build

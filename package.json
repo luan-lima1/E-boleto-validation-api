@@ -2,10 +2,10 @@
   "name": "validation-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
     "test": "jest --runInBand",
-    "build": "nest build",
+    "build": "tsc -p tsconfig.json",
     "dev": "npx nodemon -r dotenv/config --exec ts-node --files src/server.ts | pino-pretty"
   },
   "keywords": [],
@@ -36,8 +36,6 @@
   },
   "dependencies": {
     "@types/jest": "^28.1.0",
-    "axios": "^0.27.2",
-    "axios-logger": "^2.6.1",
     "dayjs": "^1.11.2",
     "dotenv": "^8.2.0",
     "express": "^4.18.1",
