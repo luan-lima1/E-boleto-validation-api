@@ -1,4 +1,4 @@
-# API - REST desenvolvida em Node.js, Typescript e AWS Lambda.
+# API - REST desenvolvida em Node.js, Typescript.
 
 Esta API recebe os números (sem pontos, traços e espaços) da linha digitável de boletos bancários, ou boletos de convênios, e se válidos, retorna os valores da solicitação em status(200), código de barras (barCode), validade (expirationDate),valor (amount).
 
